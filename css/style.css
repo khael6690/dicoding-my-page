@@ -74,15 +74,6 @@ ul.nav-items a:hover {
 }
 
 /* hamburger menu */
-nav a.humberger-menu {
-    background: black;
-    /* display: block; */
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 1.8em;
-}
-
 .humberger-menu {
     overflow: hidden;
     background-color: #383636;
@@ -169,6 +160,7 @@ main {
     margin: 0 auto;
     text-align: justify;
     padding: 12px;
+    overflow: hidden;
 }
 
 #sejarah .card-body h1 {
@@ -220,17 +212,16 @@ main {
 
 #wisata .gallery-card {
     max-width: 900px;
-    margin: 50px auto;
+    margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
     justify-content: center;
-    align-content: center;
 }
 
 #wisata .card {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     min-width: 100px;
     min-height: 100px;
     background: rgb(255, 255, 255);
@@ -243,10 +234,10 @@ main {
 #wisata .card-img {
     position: absolute;
     top: 0;
-    max-width: 250px;
-    max-height: 250px;
-    width: 250px;
-    height: 250px;
+    max-width: 200px;
+    max-height: 200px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     opacity: 0.9;
     border-radius: 10px;
@@ -269,8 +260,6 @@ main {
     height: 100%;
     width: 100%;
     transition: all 0.4s;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -313,7 +302,9 @@ main {
 #wisata .card:hover .second-content {
     opacity: 1;
     height: 100%;
-    font-size: 1.2em;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
     text-align: center;
     transform: rotate(0deg);
 }
@@ -460,6 +451,11 @@ aside {
     padding: 30px;
 }
 
+
+.card-profile .card-body table {
+    margin: 3px auto;
+}
+
 .card-profile header {
     text-align: center;
 }
@@ -561,6 +557,22 @@ aside {
     font-weight: 500;
 }
 
+.foot-list .social-media i.fa-facebook::after {
+    content: " Facebook";
+}
+
+.foot-list .social-media i.fa-instagram::after {
+    content: " Instagram";
+}
+
+.foot-list .social-media i.fa-linkedin::after {
+    content: " Linkedin";
+}
+
+.foot-list .social-media i.fa-github::after {
+    content: " Github";
+}
+
 .foot-list .social-media a:hover {
     color: #ffffff;
     font-weight: bold;
@@ -642,27 +654,41 @@ aside {
     }
 
     #wisata .card:hover .second-content {
-        opacity: 1;
         height: 100%;
         font-size: 0.6em;
-        text-align: center;
-        transform: rotate(0deg);
     }
 
-}
+    #card-profile .social-media {
+        display: none;
+    }
 
-@media screen and (max-width: 545px) {
+    .foot-list .menu-foot ul {
+        flex-direction: row;
+    }
+
     .foot-list {
         flex-flow: column nowrap;
         align-items: center;
     }
 
+    .foot-list .social-media ul {
+        flex-flow: row nowrap;
+    }
+
+    .foot-list .social-media i.fab::after {
+        content: none;
+    }
+
+    .foot-list .social-media i {
+        font-size: 1.4em;
+    }
+
+}
+
+@media screen and (max-width: 545px) {
+
     #sejarah .card-body .img-artikel {
         max-width: 200px;
 
-    }
-
-    #sejarah .card-body {
-        overflow: hidden;
     }
 }

@@ -619,8 +619,6 @@ aside {
         order: -1;
     }
 
-
-
     main aside {
         align-self: stretch;
     }
@@ -657,5 +655,14 @@ aside {
     .foot-list {
         flex-flow: column nowrap;
         align-items: center;
+    }
+
+    #sejarah .card-body .img-artikel {
+        max-width: 100px;
+
+    }
+
+    #sejarah .card-body {
+        overflow: hidden;
     }
 }
